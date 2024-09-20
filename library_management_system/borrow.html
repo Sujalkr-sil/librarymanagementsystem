@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Borrowing</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Borrow a Book</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="books.html">Books</a>
+        <a href="members.html">Members</a>
+        <a href="borrow.html">Borrowing</a>
+    </nav>
+
+    <div class="container">
+        <h2>Borrow a Book</h2>
+        <form id="borrowForm">
+            <label for="memberID">Member ID:</label>
+            <input type="text" id="memberID" required>
+            <br><br>
+            <label for="bookID">Book ID:</label>
+            <input type="text" id="bookID" required>
+            <br><br>
+            <label for="borrowDate">Borrow Date:</label>
+            <input type="date" id="borrowDate" required>
+            <br><br>
+            <button type="button" onclick="borrowBook()">Borrow Book</button>
+        </form>
+
+        <h2>Borrowing Records</h2>
+        <table id="borrowTable">
+            <tr>
+                <th>Member ID</th>
+                <th>Book ID</th>
+                <th>Borrow Date</th>
+                <th>Return Date</th>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Library Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
